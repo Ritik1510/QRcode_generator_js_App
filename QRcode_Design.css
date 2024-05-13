@@ -1,0 +1,221 @@
+:root {
+   --p-padding: 0.4em;
+}
+
+.html,
+body {
+   display: block;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 1rem;
+   padding: clamp(0.3rem, 0.5rem, 0.65rem);
+}
+
+.header-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 2px solid rgb(189, 181, 181);
+   border-radius: 6px;
+   padding: 0.4rem;
+   position: sticky;
+   top: 0;
+   backdrop-filter: blur(10px);
+}
+
+.header-wrapper>div {
+   flex-grow: 1;
+}
+
+.main-logo {
+   list-style: none;
+   text-decoration: none;
+}
+
+.navbar-links-wrapper {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: clamp(0.85rem, 1.1rem, 1.3rem);
+}
+
+.navbar-links-wrapper li {
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 1;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+   color: inherit;
+   padding: clamp(0.4rem, 0.6rem, 0.9rem);
+}
+
+.navbar-links-wrapper>li>a {
+   height: 100%;
+   width: 100%;
+   border: 2px solid rgb(189, 181, 181);
+   border-radius: 9px;
+}
+
+.main-generator-area {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: clamp(0.9rem, 1.2rem, 1.4rem);
+   border: 2px solid rgb(189, 181, 181);
+   border-radius: 6px;
+   padding: 0.85rem;
+   gap: clamp(0.9rem, 1rem, 1.5rem);
+}
+
+.requirement-provider {
+   display: grid;
+   flex-grow: 1;
+   align-items: start;
+   gap: 0.5rem;
+   max-width: 60%;
+   height: 100%;
+   padding: clamp(0.75rem, 0.79rem, 0.8rem);
+}
+
+.requirement-provider>div {
+   border: 2px solid rgb(189, 181, 181);
+   border-radius: clamp(4px, 5.89px, 6.5px);
+   /* height: clamp(2.35rem, 2.95rem, 3.2rem); */
+   padding: 0.25rem;
+   height: auto;
+}
+
+.input-area {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.form-ele-enter-url {
+   height: 100%;
+   flex-grow: 1;
+}
+
+#enter-url {
+   display: block;
+   height: 100%;
+   width: 100%;
+   line-height: 1.5rem;
+   border: none;
+   outline: none;
+   font-size: 1rem;
+   text-align: left;
+}
+
+.RP-btn-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: clamp(2rem, 2.5rem, 2.7rem) !important;
+}
+
+.RP-btn-box>button {
+   border: 1.3px solid rgb(189, 181, 181);
+   border-radius: clamp(4px, 5px, 6px);
+   background-color: #7a7878;
+   color: #fff;
+   padding: clamp(0.5rem, 0.15rem, 0.25rem);
+   cursor: pointer;
+}
+
+
+.qrcode-provider {
+   display: flex;
+   padding: clamp(0.75rem, 0.89rem, 1rem);
+   justify-content: center;
+   align-items: center;
+   max-width: 38%;
+   height: auto;
+}
+
+#qrcode img {
+   max-height: 100%;
+   max-width: 100%;
+}
+
+/* -------------------------- hamburger button----------------- */
+
+.hamburger {
+   padding: var(--p-btn);
+   display: none;
+}
+
+
+.navbar-links-wrapper[data-visible="true"]{
+   display: flex;
+}
+
+.hamburger span,
+.hamburger-close span {
+   display: block;
+   height: 2px;
+   width: 12px;
+   background-color: black;
+   margin-bottom: 2px;
+}
+
+.data-visible {
+   display: block;
+}
+
+/* Form-section */
+
+.form-panel{
+   display: flex;
+   flex-direction: row;
+   gap: clamp(0.55rem, 0.7rem, 0.8rem);
+   font-size: inherit;
+}
+
+.form-panel > *{
+   flex: 1;
+}
+
+#select-fav-color {
+   border: none;
+   border-radius: 50%;
+   padding: none;
+}
+
+/* media-queries */
+
+
+@media only screen and (max-width: 768px) {
+   .main-generator-area {
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   .navbar-links-wrapper {
+      display: none;
+      position: fixed;
+      /*this is help to prevent another scroll while the nav is open*/
+      inset: 0 0 0 54%;
+      z-index: 9999;
+      flex-direction: column;
+      padding: min(30vh, 10rem) 2em !important;
+      margin: 0;
+      gap: 2rem;
+      background-color: rgb(249, 173, 173);
+   }
+
+   .hamburger {
+      position: relative;
+      z-index: 9999;
+      display: block;
+      cursor: pointer;
+   }
+
+   .form-panel{
+      flex-wrap: wrap;
+   }
+}

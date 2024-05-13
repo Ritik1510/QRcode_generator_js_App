@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, 
+						initial-scale=1.0" />
+   <title>QR Code Generator</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+   <link rel="stylesheet" href="QRcode_Design.css">
+</head>
+
+<body>
+   <header class="header-wrapper">
+
+      <div class="main-logo">
+         <a href="#">@QRcode</a>
+      </div>
+
+      <nav class="navbar-links">
+         <ul class="navbar-links-wrapper" data-visible="false">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+         <div class="hamburger-main-box">
+            <a href="#" class="hamburger" aria-expanded="false">
+               <!--the false consider as a string not a boolean value*/-->
+               <span></span>
+               <span></span>
+               <span></span>
+            </a>
+         </div>
+      </nav>
+
+   </header>
+
+   <div class="main-generator-area">
+
+      <div class="requirement-provider">
+
+         <div class="input-area">
+            <form action="" class="form-ele-enter-url">
+               <input type="text" name="input-link" id="enter-url" placeholder="Enter URL" required>
+            </form>
+         </div>
+
+         <div class="RP-btn-box">
+            <button class="generate-btn" id="generate-btn">Generate</button>
+            <button class="download-btn" id="download-btn">Download</button>
+         </div>
+
+         <div class="form-section">
+            <form action="" class="form-panel">
+               <div class="fav-dark-color">
+                  <input type="color" id="select-fav-color" />
+                  <input type="" name="input-dark-color" id="input-dark-color" placeholder="Enter dark color">
+               </div>
+
+               <input type="" name="input-light-color" id="input-light-color" placeholder="Enter light color">
+
+               <input type="" name="input-correct-lvl" id="input-correct-lvl" placeholder="Enter correction level">
+            </form>
+         </div>
+      </div>
+
+      <div class="qrcode-provider">
+         <main>
+            <div id="qrcode"></div>
+         </main>
+      </div>
+
+   </div>
+   <script src="QR_code.js"></script>
+</body>
+
+</html>
