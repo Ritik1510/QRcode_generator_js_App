@@ -1,3 +1,5 @@
+
+// function for ensure the input is valid/fullfll or not 
 const valid_input = () => {
 	const input = [
 		document.getElementById("enter-url").value,
@@ -8,13 +10,15 @@ const valid_input = () => {
 	return input.every(input => input.trim() !== ""); 
 }
 
+// function for prevent from qrcode overflow
 const apply_configuration = (config_fnc) => {
 	const qrcode_container = document.getElementById("qrcode");
 	qrcode_container.innerHTML = ""; 
 	config_fnc(qrcode_container); 
 } 
 
-const gen_btn = () => {
+// main function for generating qrcode 
+let gen_btn = () => {
 
 	if (!valid_input()) {
 		alert("Please fill out fields!");
@@ -25,8 +29,8 @@ const gen_btn = () => {
 	const qr_color_dark = document.getElementById("input-dark-color").value;
 	const qr_color_light = document.getElementById("input-light-color").value;
 	const qr_correct_lvl = document.getElementById("input-correct-lvl").value;
-	let container = document.getElementById("qrcode");
 
+	// assign the values
 	const config_fnc = (container) => {
 		new QRCode(container, {
 			text: qr_text,
@@ -38,15 +42,13 @@ const gen_btn = () => {
 		});
 	}
 	
-
 	apply_configuration(config_fnc); 
-	return qrcode;
 }
 
 document.getElementById('generate-btn').addEventListener('click', gen_btn);
 
+// hamburger button section 
 const hamburgerBtn = document.querySelector(".hamburger");
-const hamburgerCloseBtn = document.querySelector(".hamburger-close");
 const navselector = document.querySelector(".navbar-links-wrapper");
 
 hamburgerBtn.addEventListener('click', () => {
