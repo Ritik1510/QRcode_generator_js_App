@@ -200,7 +200,7 @@ a {
    font-size: inherit;
 }
 
-#select-fav-color {
+#select-fav-dark-color #select-fav-light-color {
    border: none;
    border-radius: 50%;
    padding: none;
