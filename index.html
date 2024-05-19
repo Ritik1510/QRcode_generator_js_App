@@ -19,7 +19,7 @@
 
       <nav class="navbar-links">
          <ul class="navbar-links-wrapper" data-visible="false">
-            <li><a href="#">Products</a></li>
+            <li><a href="https://www.github.com/Ritik1510/" target="_blank">InReact</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
          </ul>
@@ -35,52 +35,66 @@
 
    </header>
 
-   <div class="main-generator-area">
-
-      <div class="requirement-provider">
-
-         <div class="input-area">
-            <form action="" class="form-ele-enter-url">
-               <input type="text" name="input-link" id="enter-url" placeholder="Enter URL" required>
-            </form>
-         </div>
-
-         <div class="RP-btn-box">
-            <button class="generate-btn" id="generate-btn">Generate</button>
-            <button class="download-btn" id="download-btn">Download</button>
-         </div>
-
-         <div class="form-section">
-            <form action="" class="form-panel">
-               <div class="fav-dark-color">
-                  <input type="color" id="select-fav-dark-color" />
-                  <input type="" name="input-dark-color" id="input-dark-color" placeholder="Enter dark color">
-               </div>
-
-               <div class="fav-light-color">
-                  <input type="color" id="select-fav-light-color" />
-                  <input type="" name="input-light-color" id="input-light-color" placeholder="Enter light color">
-               </div>
-
-               <div class="correct-lvl-box">
-                  <select name="input-correct-lvl" id="input-correct-lvl">
-                     <option value="H">H</option>
-                     <option value="M">M</option>
-                     <option value="Q">Q</option>
-                     <option value="L">L</option>
-                  </select>
-               </div>
-            </form>
-         </div>
+   <div class="main">
+      <div class="qr-hero-section">
+         <p class="qr-hero-text">
+            Generate QR codes with diff-different inputs
+         </p>
       </div>
 
-      <div class="qrcode-provider">
-         <main>
-            <div id="qrcode"></div>
-         </main>
-      </div>
+      <div class="main-generator-area">
 
+         <div class="requirement-provider">
+
+            <div class="input-area">
+               <form action="" class="form-ele-enter-url">
+                  <input type="text" name="input-link" id="enter-url" placeholder="Enter URL" required>
+               </form>
+            </div>
+
+            <div class="RP-btn-box">
+               <button class="generate-btn" id="generate-btn">Generate</button>
+               <button class="download-btn" id="download-btn">Download</button>
+            </div>
+
+            <div class="form-section">
+               <form action="" class="form-panel">
+                  <div class="fav-dark-color">
+                     <input type="color" id="select-fav-dark-color" />
+                     <input type="" name="input-dark-color" id="input-dark-color" placeholder="Enter dark color">
+                  </div>
+
+                  <div class="fav-light-color">
+                     <input type="color" id="select-fav-light-color" />
+                     <input type="" name="input-light-color" id="input-light-color" placeholder="Enter light color">
+                  </div>
+
+                  <div class="correct-lvl-box">
+                     <select name="input-correct-lvl" id="input-correct-lvl">
+                        <option value="H">H</option>
+                        <option value="M">M</option>
+                        <option value="Q">Q</option>
+                        <option value="L">L</option>
+                     </select>
+                  </div>
+               </form>
+            </div>
+         </div>
+
+         <div class="qrcode-provider">
+            <main>
+               <div id="qrcode"></div>
+            </main>
+         </div>
+
+      </div>
    </div>
+
+   <footer class="qr-footer">
+      <p class="qr-footer-text">
+         @All Rights Reserved
+      </p>
+   </footer>
    <script src="QR_code.js"></script>
 </body>
 
