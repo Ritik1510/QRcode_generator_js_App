@@ -14,14 +14,14 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border-radius: 6px;
    padding: var(--p-padding);
    position: sticky;
    top: 0;
    backdrop-filter: blur(10px);
    height: clamp(12.4dvh, 12.8dvh, 12.9dvh);
    font-size: inherit;
-   background-color: #e5e5f1;
+   background-color: #6d6868;
+   color: #ffffff;
 }
 
 .header-wrapper>div {
@@ -62,11 +62,20 @@ a {
 
 /* section area */
 
+.main-body {
+   max-width: 100%;
+}
+
 .qr-hero-section {
    height: 24dvh;
-   width: 100%;
    max-width: 100%;
-   margin-inline: clamp(1.5rem, 2rem, 2.4rem);
+   background-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(106, 26, 76) 50%, rgb(255, 255, 255) 100%);
+   color: #ffffff;
+   display: flex;
+   align-items: flex-start;
+   justify-content:center;
+   flex-direction: column;
+   padding-inline: 1.5rem;
 }
 
 .qr-hero-text {
@@ -76,10 +85,8 @@ a {
    font-weight: bold;
 }
 
-/* main */
-
-.main{
-   padding: var(--p-padding);
+.qr-hero-text-l1 {
+   font-size: 1.2rem;
 }
 
 
@@ -88,11 +95,11 @@ a {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-top: clamp(0.9rem, 1.2rem, 1.4rem);
    border-radius: 6px;
-   padding: 0.85rem;
    gap: clamp(0.9rem, 1rem, 1.5rem);
    background-color: #e5e5f1;
+   max-width: 100%;
+   padding: var(--p-padding);
 }
 
 .requirement-provider {
@@ -156,8 +163,6 @@ a {
 .RP-btn-box>button:hover {
    background-color: #ffffff;
 }
-
-
 
 .qrcode-provider {
    display: flex;
@@ -241,8 +246,17 @@ a {
 /* qr-footer area */
 .qr-footer {
    width: 100%;
-   border: 2px solid red;
+   max-width: 100%;
    padding: var(--p-padding);
+   position: fixed;
+   bottom: 0;
+   display: flex;
+   align-items: center;
+   gap: 0.2rem;
+   line-height: 1.1rem;
+   font-weight: 700;
+   background-color: #6d6868;
+   color: #ffffff;
 }
 
 
