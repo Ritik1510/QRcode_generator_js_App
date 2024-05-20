@@ -70,7 +70,6 @@ selectDarkColor.addEventListener("input", () => {
 	update_current_value("#select-fav-dark-color", "#input-dark-color");
 });
 
-
 selectLightColor.addEventListener("input", () => {
 	update_current_value("#select-fav-light-color", "#input-light-color");
 });
