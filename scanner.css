@@ -1,0 +1,12 @@
+html, body{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   display: block;
+}
+
+.cam-box{
+   height: 200px;
+   width: 200px;
+   border: 2px solide red;
+}
